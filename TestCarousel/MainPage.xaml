@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="TestCarousel.MainPage"
+    xmlns:local="clr-namespace:TestCarousel"
+    xmlns:pcv="clr-namespace:PanCardView;assembly=PanCardView"
+    xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+    x:Name="page"
+    >
+    <ContentPage.Content>
+        <StackLayout Padding="0,30,0,0" Margin="0" Spacing="0" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource LightGray}">
+            <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource LightGray}" >
+                    <StackLayout Orientation="Vertical" BackgroundColor="{StaticResource LightGray}">
+                        <Grid Padding="10" RowSpacing="10" ColumnSpacing="0" BackgroundColor="{StaticResource LightGray}" VerticalOptions="FillAndExpand" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="250" />
+                                <RowDefinition Height="250" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <ContentView Grid.Row="0" Grid.Column="0" BackgroundColor="White" Padding="0" Margin="0">
+                                <pcv:CarouselView CurrentIndex="0">
+                                    <pcv:CarouselView.Items>
+                                           <x:Array Type="{x:Type Grid}">
+
+                                                <!-- Page: Summary -->
+                                                <Grid Margin="0,2,0,2" RowSpacing="0" ColumnSpacing="0" BackgroundColor="Transparent">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="2" />
+                                                        <RowDefinition Height="*" />
+                                                        <RowDefinition Height="2" />
+                                                        <RowDefinition Height="*" />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="2" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource DashboardStackWidgetHeading}" BackgroundColor="White">
+                                                        <Label Text="COUNTS 1" Style="{StaticResource DashboardLabelWidgetHeading}" />
+                                                    </StackLayout>
+                                                    <ContentView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource LightGray}"></ContentView>
+
+                                                    <ContentView Grid.Row="2" Grid.Column="0" Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count1, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <StackLayout Orientation="Horizontal">
+                                                                <Label Text="Count 1" Style="{StaticResource DashboardLabelMiddleStatSubheading}" />
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </ContentView>
+                                                    <ContentView Grid.Row="2" Grid.Column="2" Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count2, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <StackLayout Orientation="Horizontal">
+                                                                <Label Text="Count 2" Style="{StaticResource DashboardLabelMiddleStatSubheading}" />
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </ContentView>
+
+                                                    <ContentView Grid.Row="2" Grid.Column="1" BackgroundColor="{StaticResource LightGray}"></ContentView>
+                                                    <ContentView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource LightGray}"></ContentView>
+                                                    <ContentView Grid.Row="4" Grid.Column="1" BackgroundColor="{StaticResource LightGray}"></ContentView>
+                                                    
+                                                    <ContentView Grid.Row="4" Grid.Column="0"  Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count3, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <StackLayout Orientation="Horizontal">
+                                                                <Label Text="Count 3" Style="{StaticResource DashboardLabelMiddleStatSubheading}" />
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </ContentView>
+                                                    <ContentView Grid.Row="4" Grid.Column="2"  Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count4, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <StackLayout Orientation="Horizontal">
+                                                                <Label Text="Count 4" Style="{StaticResource DashboardLabelMiddleStatSubheading}" />
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </ContentView>
+                                                </Grid>
+
+                                                <!-- Page: Summary2 -->
+                                                <Grid Margin="0,2,0,2" RowSpacing="0" ColumnSpacing="0" BackgroundColor="Transparent">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="2" />
+                                                        <RowDefinition Height="*" />
+                                                        <RowDefinition Height="2" />
+                                                        <RowDefinition Height="*" />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="2" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource DashboardStackWidgetHeading}" BackgroundColor="White">
+                                                        <Label Text="COUNTS 2" Style="{StaticResource DashboardLabelWidgetHeading}" />
+                                                    </StackLayout>
+                                                    <ContentView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource LightGray}"></ContentView>
+
+                                                    <ContentView Grid.Row="2" Grid.Column="0" Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count5, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <Label Text="Count 5" Style="{StaticResource DashboardLabelMiddleStatSubheading}"></Label>
+                                                        </StackLayout>
+                                                    </ContentView>
+                                                    <ContentView Grid.Row="2" Grid.Column="2" Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count6, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <Label Text="Count 6" Style="{StaticResource DashboardLabelMiddleStatSubheading}"></Label>
+                                                        </StackLayout>
+                                                    </ContentView>
+
+                                                    <ContentView Grid.Row="2" Grid.Column="1" BackgroundColor="{StaticResource LightGray}"></ContentView>
+                                                    <ContentView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource LightGray}"></ContentView>
+                                                    <ContentView Grid.Row="4" Grid.Column="1" BackgroundColor="{StaticResource LightGray}"></ContentView>
+                                                    
+                                                    <ContentView Grid.Row="4" Grid.Column="0"  Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count7, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <Label Text="Count 7" Style="{StaticResource DashboardLabelMiddleStatSubheading}"></Label>
+                                                        </StackLayout>
+                                                    </ContentView>
+                                                    <ContentView Grid.Row="4" Grid.Column="2"  Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count8, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <Label Text="Count 8" Style="{StaticResource DashboardLabelMiddleStatSubheading}"></Label>
+                                                        </StackLayout>
+                                                    </ContentView>
+                                                </Grid>
+
+                                           </x:Array>
+                                    </pcv:CarouselView.Items>
+                                </pcv:CarouselView>
+                            </ContentView>
+
+                            <ContentView Grid.Row="1" Grid.Column="0" BackgroundColor="White" Padding="0" Margin="0">
+                                <cv:CarouselViewControl Position="0">
+                                    <cv:CarouselViewControl.ItemsSource>
+                                           <x:Array Type="{x:Type Grid}">
+
+                                                <!-- Page: Summary -->
+                                                <Grid Margin="0,2,0,2" RowSpacing="0" ColumnSpacing="0" BackgroundColor="Transparent">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="2" />
+                                                        <RowDefinition Height="*" />
+                                                        <RowDefinition Height="2" />
+                                                        <RowDefinition Height="*" />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="2" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource DashboardStackWidgetHeading}" BackgroundColor="White">
+                                                        <Label Text="COUNTS 1" Style="{StaticResource DashboardLabelWidgetHeading}" />
+                                                    </StackLayout>
+                                                    <ContentView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource LightGray}"></ContentView>
+
+                                                    <ContentView Grid.Row="2" Grid.Column="0" Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count1, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <StackLayout Orientation="Horizontal">
+                                                                <Label Text="Count 1" Style="{StaticResource DashboardLabelMiddleStatSubheading}" />
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </ContentView>
+                                                    <ContentView Grid.Row="2" Grid.Column="2" Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count2, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <StackLayout Orientation="Horizontal">
+                                                                <Label Text="Count 2" Style="{StaticResource DashboardLabelMiddleStatSubheading}" />
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </ContentView>
+
+                                                    <ContentView Grid.Row="2" Grid.Column="1" BackgroundColor="{StaticResource LightGray}"></ContentView>
+                                                    <ContentView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource LightGray}"></ContentView>
+                                                    <ContentView Grid.Row="4" Grid.Column="1" BackgroundColor="{StaticResource LightGray}"></ContentView>
+                                                    
+                                                    <ContentView Grid.Row="4" Grid.Column="0"  Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count3, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <StackLayout Orientation="Horizontal">
+                                                                <Label Text="Count 3" Style="{StaticResource DashboardLabelMiddleStatSubheading}" />
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </ContentView>
+                                                    <ContentView Grid.Row="4" Grid.Column="2"  Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count4, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <StackLayout Orientation="Horizontal">
+                                                                <Label Text="Count 4" Style="{StaticResource DashboardLabelMiddleStatSubheading}" />
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </ContentView>
+                                                </Grid>
+
+                                                <!-- Page: Summary2 -->
+                                                <Grid Margin="0,2,0,2" RowSpacing="0" ColumnSpacing="0" BackgroundColor="Transparent">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="2" />
+                                                        <RowDefinition Height="*" />
+                                                        <RowDefinition Height="2" />
+                                                        <RowDefinition Height="*" />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="2" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource DashboardStackWidgetHeading}" BackgroundColor="White">
+                                                        <Label Text="COUNTS 2" Style="{StaticResource DashboardLabelWidgetHeading}" />
+                                                    </StackLayout>
+                                                    <ContentView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource LightGray}"></ContentView>
+
+                                                    <ContentView Grid.Row="2" Grid.Column="0" Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count5, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <Label Text="Count 5" Style="{StaticResource DashboardLabelMiddleStatSubheading}"></Label>
+                                                        </StackLayout>
+                                                    </ContentView>
+                                                    <ContentView Grid.Row="2" Grid.Column="2" Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count6, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <Label Text="Count 6" Style="{StaticResource DashboardLabelMiddleStatSubheading}"></Label>
+                                                        </StackLayout>
+                                                    </ContentView>
+
+                                                    <ContentView Grid.Row="2" Grid.Column="1" BackgroundColor="{StaticResource LightGray}"></ContentView>
+                                                    <ContentView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource LightGray}"></ContentView>
+                                                    <ContentView Grid.Row="4" Grid.Column="1" BackgroundColor="{StaticResource LightGray}"></ContentView>
+                                                    
+                                                    <ContentView Grid.Row="4" Grid.Column="0"  Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count7, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <Label Text="Count 7" Style="{StaticResource DashboardLabelMiddleStatSubheading}"></Label>
+                                                        </StackLayout>
+                                                    </ContentView>
+                                                    <ContentView Grid.Row="4" Grid.Column="2"  Style="{StaticResource DashboardGridCellMiddleStat}">
+                                                        <StackLayout Style="{StaticResource DashboardStackLayoutMiddleStat}">
+                                                            <Label Text="{Binding Stats.Count8, StringFormat='{0:N0}'}" Style="{StaticResource DashboardLabelMiddleStatHeading}" />
+                                                            <Label Text="Count 8" Style="{StaticResource DashboardLabelMiddleStatSubheading}"></Label>
+                                                        </StackLayout>
+                                                    </ContentView>
+                                                </Grid>
+
+                                           </x:Array>
+                                    </cv:CarouselViewControl.ItemsSource>
+                                </cv:CarouselViewControl>
+                            </ContentView>
+                        </Grid>
+                    </StackLayout>
+                </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

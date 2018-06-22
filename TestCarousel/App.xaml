@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TestCarousel.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="LightGray">#F3F3F3</Color>
+            <Color x:Key="PrimaryLight">#7A868F</Color>
+            <Color x:Key="PrimaryDark">#444A54</Color>
+
+            <!-- Define some dashboard styles here instead of on-page because CarouselView
+            won't recognize them in-page for some reason, but will recognize global ones -->
+            <Style x:Key="DashboardGridCellMiddleStat" TargetType="ContentView">
+                <Setter Property="BackgroundColor" Value="White" />
+            </Style>
+            <Style x:Key="DashboardLabelTopHeading" TargetType="Label">
+                <Setter Property="FontSize" Value="26" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
+            </Style>
+            <Style x:Key="DashboardStackWidgetHeading" TargetType="StackLayout">
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="Padding" Value="15" />
+            </Style>
+            <Style x:Key="DashboardLabelWidgetHeading" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryLight}" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="DashboardLabelWidgetHeadingIcon" TargetType="Label">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryLight}" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="DashboardLabelMiddleStatHeading" TargetType="Label">
+                <Setter Property="FontSize" Value="32" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
+            </Style>
+            <Style x:Key="DashboardLabelMiddleStatSubheading" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryLight}" />
+            </Style>
+            <Style x:Key="DashboardStackLayoutMiddleStat" TargetType="StackLayout">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Padding" Value="30, 20, 0, 20" />
+            </Style>
+        </ResourceDictionary>  
+    </Application.Resources>
+</Application>
